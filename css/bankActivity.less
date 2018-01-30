@@ -1,0 +1,49 @@
+@import './base.less';
+body {
+    padding-top: 128px;
+}
+// 顶部折叠导航
+.foldNav {
+    width: 100%;
+    height: 35px;
+    position: fixed;
+    top: 93px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    z-index: 10;
+    &.fold {
+        overflow: hidden;
+    }
+    .iconfont {
+        color: #436ED2;
+        font-size: .625rem;
+        position: absolute;
+        right: .9375rem;
+        z-index: 10;
+        .center-y();
+    }
+    ul {
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        z-index: 5;
+        padding: 0 .875rem;
+        box-sizing: border-box;
+        .clearfix();
+        >li {
+            padding-right: 1rem;
+            box-sizing: border-box;
+            float: left;
+            height: 2.1875rem;
+            line-height: 2.1875rem;
+            a {
+                font-size: .9375rem;
+                color: #333;
+                &.active {
+                    color: #5971F6;
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

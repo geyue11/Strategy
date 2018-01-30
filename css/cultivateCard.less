@@ -1,0 +1,38 @@
+@import './base.less';
+body {
+    padding-top: 93px+44px;
+}
+// 选项卡
+.optionControlBox {
+    width: 100%;
+    position: fixed;
+    background-color: #fff;
+    z-index: 10;
+    top: 93px;
+    .optionControl {
+        box-sizing: border-box;
+        margin: 8px;
+        border: 1px solid #5971F6;
+        border-radius: 5px;
+        .clearfix();
+        .item {
+            display: block;
+            float: left;
+            height: 28px;
+            line-height: 28px;
+            text-align: center;
+            width: 33.33%;
+            color: #5971F6;
+            font-size: .75rem;
+            .bz();
+            &:nth-child(2) {
+                border-left: 1px solid #5971F6;
+                border-right: 1px solid #5971F6;
+            }
+            &.active {
+                background-color: #5971F6;
+                color: #fff;
+            }
+        }
+    }
+}

@@ -1,0 +1,556 @@
+@charset "utf-8";
+/* 禁用iPhone中Safari的字号自动调整 */
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  /* 解决IOS默认滑动很卡的情况 */
+  -webkit-overflow-scrolling: touch;
+}
+/* 禁止缩放表单 */
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input {
+  resize: none;
+  border: none;
+}
+/* 取消链接高亮  */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+/* 设置HTML5元素为块 */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+/* 图片自适应 */
+img {
+  width: 100%;
+  height: auto;
+  width: auto\9;
+  /* ie8 */
+  display: block;
+  -ms-interpolation-mode: bicubic;
+  /*为了照顾ie图片缩放失真*/
+}
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
+  color: #555;
+}
+em,
+i {
+  font-style: normal;
+}
+ul,
+li {
+  list-style-type: none;
+}
+strong {
+  font-weight: normal;
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+a {
+  text-decoration: none;
+  color: #969696;
+  font-family: 'Microsoft YaHei', Tahoma, Arial, sans-serif;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+ol {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-family: 'Microsoft YaHei';
+}
+img {
+  border: none;
+}
+input {
+  font-family: 'Microsoft YaHei';
+}
+.w50 {
+  width: 50%;
+}
+.w25 {
+  width: 25%;
+}
+.w20 {
+  width: 20%;
+}
+.w33 {
+  width: 33.333333%;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.db {
+  display: block !important;
+}
+.dn {
+  display: none;
+}
+/*单行溢出*/
+.one_txt_cut {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+/*多行溢出 手机端使用*/
+/* 水平垂直居中的公共类 */
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 水平居中公共类 */
+.center-x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* 垂直居中公共类 */
+.center-y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.bgz {
+  -webkit-background-size: 100% 100%;
+  background-size: 100% 100%;
+}
+.bz {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ad {
+  margin-top: 45px;
+  padding: 10px;
+  position: relative;
+  z-index: 5;
+  background-color: #fff;
+}
+.ad img {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+}
+.ad .swiper-pagination {
+  text-align: right;
+  padding-right: .3125rem;
+  box-sizing: border-box;
+}
+.ad .swiper-pagination-fraction,
+.ad .swiper-pagination-custom,
+.ad .swiper-container-horizontal > .swiper-pagination-bullets {
+  bottom: 2px;
+  left: 0;
+  width: 100%;
+}
+.ad .swiper-pagination-bullet {
+  width: 6px;
+  height: 6px;
+}
+.ad .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #436ED2;
+}
+.ad .swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 7px;
+}
+.selectOption {
+  width: 100%;
+  height: 2.1875rem;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5;
+  background-color: #fff;
+}
+.selectOption .optionNav {
+  padding: 0 1.25rem;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  zoom: 1;
+}
+.selectOption .optionNav:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.selectOption .optionNav .item {
+  display: block;
+  float: left;
+  width: 33.33%;
+  text-align: center;
+  font-size: .75rem;
+  color: #333;
+  line-height: 2.1875rem;
+  position: relative;
+}
+.selectOption .optionNav .item.item1 {
+  text-align: left;
+}
+.selectOption .optionNav .item.item3 {
+  text-align: right;
+  padding-right: .3125rem;
+  box-sizing: border-box;
+}
+.selectOption .optionNav .item .iconfont {
+  display: inline-block;
+  font-size: .3125rem;
+  color: #999;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.selectOption .optionNav .item.active {
+  color: #5971F6;
+}
+.selectOption .optionNav .item.active .iconfont {
+  color: #5971F6;
+}
+.selectOption .optionBox {
+  display: none;
+  padding: 0 1.25rem;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 6.875rem;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.selectOption .optionBox .boxes {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.selectOption .optionBox .boxes .box {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
+  position: absolute;
+  z-index: 21;
+}
+.selectOption .optionBox .boxes .box span {
+  display: block;
+  width: 6.25rem;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: .75rem;
+  text-align: center;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  color: #333;
+  margin-top: 1.125rem;
+}
+.selectOption .optionBox .boxes .box span.active {
+  border: 1px solid #5971F6;
+  color: #5971F6;
+}
+.selectOption .optionBox .boxes .box.hide {
+  display: none;
+}
+.compareBox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4.375rem;
+  z-index: 30;
+}
+.compareBox .left {
+  width: 1.5rem;
+  padding-top: 1.6875rem;
+  box-sizing: border-box;
+  text-align: center;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 31;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+.compareBox .left img {
+  width: 1.125rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: .6875rem;
+}
+.compareBox .left p {
+  color: #F6B73B;
+  font-size: .875rem;
+  line-height: .875rem;
+}
+.compareBox .right {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: -1000px;
+  background-color: #fff;
+}
+.compareBox .right .content {
+  padding-left: 5.375rem;
+  box-sizing: border-box;
+  position: relative;
+  height: 100%;
+  padding-top: .8125rem;
+}
+.compareBox .right .content .compareItem {
+  width: 3.125rem;
+  height: 3.125rem;
+  position: relative;
+  float: left;
+  margin-right: 1.25rem;
+}
+.compareBox .right .content .compareItem img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3px;
+}
+.compareBox .right .content .compareItem span {
+  position: absolute;
+  top: -0.375rem;
+  right: -0.375rem;
+  font-size: .75rem;
+  color: #000;
+}
+.compareBox .right .compareBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 7.125rem;
+  height: 100%;
+  background: linear-gradient(#8CABF3, #5870F6);
+  text-align: center;
+  line-height: 4.375rem;
+}
+.compareBox .right .compareBtn a {
+  color: #fff;
+  font-size: 1.125rem;
+}
+.loansList {
+  padding: 10px 15px;
+}
+.loansList ul {
+  width: 100%;
+}
+.loansList ul li {
+  width: 100%;
+  height: 6.25rem;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  padding: .9375rem;
+  box-sizing: border-box;
+  position: relative;
+  margin-bottom: .625rem;
+  zoom: 1;
+}
+.loansList ul li:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.loansList ul li .left {
+  float: left;
+  height: 100%;
+}
+.loansList ul li .left .left_title {
+  zoom: 1;
+  margin-bottom: .3125rem;
+  height: 1.125rem;
+  line-height: 1.125rem;
+}
+.loansList ul li .left .left_title:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.loansList ul li .left .left_title .logo {
+  float: left;
+}
+.loansList ul li .left .left_title .logo img {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.loansList ul li .left .left_title .title {
+  float: left;
+  font-size: .875rem;
+  padding: 0 .5rem;
+}
+.loansList ul li .left .left_title .des {
+  display: block;
+  height: 1rem;
+  line-height: 1rem;
+  float: left;
+  color: #30C8C8;
+  font-size: .5rem;
+  border: 1px solid #30C8C8;
+  padding: .0625rem;
+  box-sizing: border-box;
+  transform: skewX(-5deg);
+  padding: 0 .1875rem;
+}
+.loansList ul li .left .left_des {
+  font-size: .625rem;
+  color: #999;
+  line-height: 1.5625rem;
+}
+.loansList ul li .left .left_money {
+  font-size: .625rem;
+  color: #999;
+  line-height: 1.5625rem;
+}
+.loansList ul li .left .left_money span.num {
+  color: #FF6363;
+  font-size: .75rem;
+  padding: 0 .3125rem;
+}
+.loansList ul li .right {
+  height: 100%;
+  float: right;
+  box-sizing: border-box;
+  padding-top: 1.5625rem;
+}
+.loansList ul li .right p {
+  font-size: .625rem;
+  color: #999;
+}
+.loansList ul li .right p.num {
+  color: #FF6363;
+  font-size: .875rem;
+}
+.loansList ul li .compare {
+  width: 3.75rem;
+  height: 1.25rem;
+  line-height: 1.25rem;
+  position: absolute;
+  text-align: center;
+  font-size: .625rem;
+  border-bottom-left-radius: 5px;
+  top: 0;
+  right: 0;
+  background: linear-gradient(#62E4E4, #30C8C8);
+  color: #fff;
+}
+.loansList ul li .compare .iconfont {
+  font-size: .5rem;
+  padding: 0 .1875rem;
+}

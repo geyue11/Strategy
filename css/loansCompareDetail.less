@@ -1,0 +1,107 @@
+@import './base.less';
+.compareList {
+    padding: 45px+.625rem .9375rem .625rem .9375rem;
+    .item {
+        padding: .625rem .3125rem;
+        .clearfix();
+        border-bottom: 1px solid #ddd;
+        &:last-child {
+            border-bottom: none;
+        }
+        position: relative;
+        p {
+            float: left;
+            text-align: center;
+            margin-right: .9375rem;
+            color: #030303;
+            font-size: .75rem;
+            height: 100%;
+            // position: absolute;
+            &.one {
+                width: 3.5625rem;
+                // .center-y();
+            }
+            &.two {
+                width: 7rem;
+                img {
+                    width: 1.875rem;
+                    margin: 0 auto;
+                }
+            }
+            &.three {
+                width: 7rem;
+                margin-right: 0;
+                img {
+                    width: 1.875rem;
+                    margin: 0 auto;
+                }
+            }
+            &.des {
+                text-align: left;
+                color: #666;
+            }
+            &.check {
+                padding: 0 .625rem;
+                box-sizing: border-box;
+                input {
+                    opacity: 0;
+                }
+                .yes {
+                    display: block;
+                    position: relative;
+                    width: 2.5rem;
+                    height: .9375rem;
+                    float: left;
+                    text-indent: 1.125rem;
+                    margin-right: .625rem;
+                    input {
+                        z-index: 4;
+                    }
+                    .boxYes,input {
+                        position: absolute;
+                        display: block;
+                        width: .9375rem;
+                        height: .9375rem;
+                        border: 1px solid #979797;
+                    }
+                    img {
+                        width: .9375rem;
+                        position: absolute;
+                        left: .1875rem;
+                        bottom: .0625rem;
+                        &.hide {
+                            display: none;
+                        }
+                    }
+                }
+                .no {
+                    display: block;
+                    position: relative;
+                    width: 2.5rem;
+                    height: .9375rem;
+                    float: left;
+                    text-indent: 1.125rem;
+                    input {
+                        z-index: 4;
+                    }
+                    .boxNo,input {
+                        position: absolute;
+                        display: block;
+                        width: .9375rem;
+                        height: .9375rem;
+                        border: 1px solid #979797;
+                    }
+                    img {
+                        width: .9375rem;
+                        position: absolute;
+                        left: .1875rem;
+                        bottom: .0625rem;
+                        &.hide {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

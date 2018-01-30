@@ -1,0 +1,96 @@
+@import './base.less';
+// 顶部卡片详情
+.cardBox {
+    width: 100%;
+    background-color: #fff;
+    padding-top: 45px;
+    padding-bottom: 4.75rem;
+    .top {
+        background-color: #2C2D31;
+        height: 5.625rem;
+    }
+    .card {
+        padding: 0 .9375rem;
+        position: absolute;
+        width: 100%;
+        box-sizing: border-box;
+        top: 3.75rem;
+        .cardDetail {
+            background-color: #fff;
+            height: 9rem;
+            box-shadow: 0px 0px 10px rgba(0,0,0,.3);
+            border-radius: 8px;
+            padding: 1.25rem .9375rem;
+            box-sizing: border-box;
+            .left,.right {
+                float: left;
+                p:nth-child(1) {
+                    color: #999;
+                    font-size: .9375rem;
+                }
+                p:nth-child(2) {
+                    color: #000;
+                    font-size: 1.5rem;
+                    margin: .9375rem 0;
+                }
+                p:nth-child(3) {
+                    span {
+                        color: #999;
+                        font-size: .625rem;
+                        margin-right: .5rem;
+                    }
+                }
+            }
+            .right {
+                float: right;
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+// 信息列表
+.infoList {
+    padding: .9375rem;
+    .item {
+        padding: .9375rem 0;
+        border-bottom: 1px solid #ddd;
+        h2 {
+            font-size: .9375rem;
+            color: #000;
+            margin-bottom: .9375rem;
+        }
+        p {
+            color: #666;
+            font-size: .75rem;
+            margin-bottom: .5rem;
+            line-height: 1.25rem;
+            &.red {
+                color: #FF6363;
+            }
+            &.info {
+                width: 100%;
+                .clearfix();
+                .info_item {
+                    float: left;
+                    padding: 0 .3125rem;
+                    color: #5971F6;
+                    margin-right: .5rem;
+                    &:last-child {
+                        margin-right:0
+                    }
+                    i {
+                        padding: 0 .1725rem;
+                        color: #999;
+                        &.red {
+                            color: #FF6363;
+                        }
+                    }
+                }
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
