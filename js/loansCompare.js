@@ -117,7 +117,7 @@ $(function () {
                 layer.open({
                     content: '请选择两个商品',
                     skin: 'msg',
-                    time: 3 //2秒后自动关闭
+                    time: 2 //2秒后自动关闭
                 }, 1000);
                 return false;
             }

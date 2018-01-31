@@ -248,7 +248,7 @@ body {
 }
 .foldNav .iconfont {
   color: #436ED2;
-  font-size: .625rem;
+  font-size: .75rem;
   right: .9375rem;
   z-index: 10;
   position: absolute;
@@ -278,11 +278,11 @@ body {
   height: 2.1875rem;
   line-height: 2.1875rem;
 }
+.foldNav ul > li.active a {
+  color: #5971F6;
+  font-size: 1rem;
+}
 .foldNav ul > li a {
   font-size: .9375rem;
   color: #333;
-}
-.foldNav ul > li a.active {
-  color: #5971F6;
-  font-size: 1rem;
 }

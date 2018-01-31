@@ -20,4 +20,11 @@ $(function () {
     // $('.compareList>.item').each(function (i) {
     //     $(this).children('.three').css('top', $(this).height() / 2 - $(this).children('.three').height() / 2);
     // });
+
+    // checkbox 选择框
+    // (function () {
+    //     $('.compareList').on('click', '.item .check>span', function () {
+    //         $(this).children('img').removeClass('hide').end().siblings().children('img').addClass('hide');
+    //     });
+    // })();
 });
