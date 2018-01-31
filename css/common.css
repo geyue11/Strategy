@@ -288,25 +288,22 @@ header h1 {
   background-color: #fff;
   box-sizing: border-box;
 }
-.scrollNav .whitemask {
-  width: 30px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.9);
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 10;
-}
-.scrollNav #scroller {
-  position: absolute;
+.scrollNav .scrollBox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -3px;
+  padding: 0 13px;
+  padding-right: 0;
+}
+.scrollNav .scrollBox #scroller {
+  position: absolute;
   z-index: 10;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 400px;
   height: 48px;
-  padding: 0 15px;
-  top: -3px;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -322,14 +319,12 @@ header h1 {
   -ms-text-size-adjust: none;
   -o-text-size-adjust: none;
   text-size-adjust: none;
-}
-.scrollNav #scroller ul {
   list-style: none;
-  width: 100%;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-.scrollNav #scroller ul li {
+.scrollNav .scrollBox #scroller li {
   width: 80px;
   height: 48px;
   float: left;
@@ -339,16 +334,26 @@ header h1 {
   opacity: .5;
   padding-right: 15px;
 }
-.scrollNav #scroller ul li.active {
+.scrollNav .scrollBox #scroller li.active {
   opacity: 1;
 }
-.scrollNav #scroller ul li.active a {
+.scrollNav .scrollBox #scroller li.active a {
   font-size: 18px;
 }
-.scrollNav #scroller ul li > a {
+.scrollNav .scrollBox #scroller li > a {
   color: #5971F6;
   font-size: 16px;
   font-weight: 600;
+}
+.scrollNav .whitemask {
+  width: 30px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
 }
 .newsList > li.bigList {
   padding: 0 .9375rem;
@@ -511,4 +516,7 @@ header h1 {
 }
 .gray_fg.hide {
   display: none;
+}
+#wrapper {
+  overflow: hidden;
 }

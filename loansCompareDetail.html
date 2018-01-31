@@ -22,129 +22,146 @@
         <h1>比一比</h1>
     </header>
 
-    <div class="compareList">
-        <div class="item">
-            <p class="one">产品标志</p>
-            <p class="two">
-                <img src="./images/LOGO_360借条.png" alt="">
-            </p>
-            <p class="three">
-                <img src="./images/LOGO_51返呗.png" alt="">
-            </p>
-        </div>
-        <div class="item">
-            <p class="one">额度(元)</p>
-            <p class="two">1000~50000</p>
-            <p class="three">3000~10000</p>
-        </div>
-        <div class="item">
-            <p class="one">贷款期限</p>
-            <p class="two">3-6个月</p>
-            <p class="three">3-12个月</p>
-        </div>
-        <div class="item">
-            <p class="one">综合借款成本</p>
-            <p class="two des">按月计费，月利率0.8-3.0%，月账户管理费2.9%，快速审批费1.2%/笔，平台服务费0.08%</p>
-            <p class="three des">按月计费，月利率0.8-3.0%，月账户管理费2.9%，快速审批费1.2%/笔，平台服务费0.08%</p>
-        </div>
-        <div class="item">
-            <p class="one">优惠活动</p>
-            <p class="two des">年末福利，借款手续费优惠50%，服务费全免，你还在犹豫什么！！！</p>
-            <p class="three des">无</p>
-        </div>
-        <div class="item">
-            <p class="one">是否需芝麻信用分</p>
-            <p class="two check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-            <p class="three check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-        </div>
-        <div class="item">
-            <p class="one">是否持有信用卡</p>
-            <p class="two check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-            <p class="three check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-        </div>
-        <div class="item">
-            <p class="one">是否需征信报告</p>
-            <p class="two check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-            <p class="three check">
-                <span class="yes">
-                    <input type="checkbox" value="yes">
-                    <img src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxYes"></i> 是</span>
-                <span class="no">
-                    <input type="checkbox" value="no">
-                    <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
-                    <i class="boxNo"></i> 否</span>
-            </p>
-        </div>
-        <div class="item">
-            <p class="one">申请条件</p>
-            <p class="two des">1.年龄18-40周岁，无不良记录；2.持有信用卡且时间超过半年</p>
-            <p class="three des">1.年龄18-40周岁，无不良记录；2.持有信用卡且时间超过半年</p>
-        </div>
-        <div class="item">
-            <p class="one">所需材料</p>
-            <p class="two des">1.本人身份证；2.本人手机号码近半年运营商报告</p>
-            <p class="three des">1.本人身份证；2.本人手机号码近半年运营商报告</p>
-        </div>
-        <div class="item">
-            <p class="one">还款说明</p>
-            <p class="two des">1.还款方式：自动划扣或去平台还款，可以提前还款</p>
-            <p class="three des">1.还款方式：自动划扣或去平台还款，可以提前还款</p>
-        </div>
-        <div class="item">
-            <p class="one">备注</p>
-            <p class="two des">申请通过率高，仅凭芝麻分，无逾期，就可以放款</p>
-            <p class="three des">快速放款，额度最高5万元</p>
+    <!-- 滚动区域主体 -->
+    <div id="wrapper">
+        <div id="scrollerRefresh">
+            <!-- <div id="pullDown">
+				<span class="pullDownIcon"></span>
+				<span class="pullDownLabel">下拉刷新...</span>
+			</div> -->
+
+            <div id="thelist">
+
+                <div class="compareList">
+                    <div class="item">
+                        <p class="one">产品标志</p>
+                        <p class="two">
+                            <img src="./images/LOGO_360借条.png" alt="">
+                        </p>
+                        <p class="three">
+                            <img src="./images/LOGO_51返呗.png" alt="">
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="one">额度(元)</p>
+                        <p class="two">1000~50000</p>
+                        <p class="three">3000~10000</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">贷款期限</p>
+                        <p class="two">3-6个月</p>
+                        <p class="three">3-12个月</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">综合借款成本</p>
+                        <p class="two des">按月计费，月利率0.8-3.0%，月账户管理费2.9%，快速审批费1.2%/笔，平台服务费0.08%</p>
+                        <p class="three des">按月计费，月利率0.8-3.0%，月账户管理费2.9%，快速审批费1.2%/笔，平台服务费0.08%</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">优惠活动</p>
+                        <p class="two des">年末福利，借款手续费优惠50%，服务费全免，你还在犹豫什么！！！</p>
+                        <p class="three des">无</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">是否需芝麻信用分</p>
+                        <p class="two check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                        <p class="three check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="one">是否持有信用卡</p>
+                        <p class="two check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                        <p class="three check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="one">是否需征信报告</p>
+                        <p class="two check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                        <p class="three check">
+                            <span class="yes">
+                                <input type="checkbox" value="yes">
+                                <img src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxYes"></i> 是</span>
+                            <span class="no">
+                                <input type="checkbox" value="no">
+                                <img class="hide" src="./images/icon_Checkmark@2x.png" alt="">
+                                <i class="boxNo"></i> 否</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p class="one">申请条件</p>
+                        <p class="two des">1.年龄18-40周岁，无不良记录；2.持有信用卡且时间超过半年</p>
+                        <p class="three des">1.年龄18-40周岁，无不良记录；2.持有信用卡且时间超过半年</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">所需材料</p>
+                        <p class="two des">1.本人身份证；2.本人手机号码近半年运营商报告</p>
+                        <p class="three des">1.本人身份证；2.本人手机号码近半年运营商报告</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">还款说明</p>
+                        <p class="two des">1.还款方式：自动划扣或去平台还款，可以提前还款</p>
+                        <p class="three des">1.还款方式：自动划扣或去平台还款，可以提前还款</p>
+                    </div>
+                    <div class="item">
+                        <p class="one">备注</p>
+                        <p class="two des">申请通过率高，仅凭芝麻分，无逾期，就可以放款</p>
+                        <p class="three des">快速放款，额度最高5万元</p>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
+
     <script src="./js/rem.js"></script>
     <script src="./dist/jquery/jquery.min.js"></script>
+    <script src="./dist/iscroll/iscroll-lite.js"></script>
+    <script src="./js/base.js"></script>
     <script src="./js/loansCompareDetail.js"></script>
 </body>
 
