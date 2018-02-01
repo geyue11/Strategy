@@ -19,21 +19,30 @@ $(function () {
         $('#wrapper').css('height', windowHeight);
         // 等待设置完成后初始化
         setTimeout(() => {
-            var refreshScroll = new IScroll('#wrapper');
-            
-            // refreshScroll.options
-            refreshScroll.on('scrollEnd', function (e) {
-                console.log(refreshScroll.options);
+            var refreshScroll = new IScroll('#wrapper', {
+                scrollbars: false,
+                mouseWheel: false,
+                interactiveScrollbars: true,
+                shrinkScrollbars: 'scale',
+                fadeScrollbars: true,
+                scrollY: true,
+                probeType: 2,
+                bindToWrapper: true
             });
 
-            console.log(refreshScroll.options.onScrollMove);
-
-            // refreshScroll.options.onScrollMove(function(e){
-            //     console.log(e);
-            // });
-            // refreshScroll.onscroll(function(e){
-            //     console.log(e);
-            // });
+            refreshScroll.on("scroll", function () {
+                // alert(1)
+                console.log(this.y);
+                if (this.y > 40) {
+                    layer.open({
+                        type: 2,
+                        content: '加载中'
+                    });
+                    setTimeout(() => {
+                        layer.closeAll();
+                    }, 1000);
+                }
+            })
         }, 100);
     })();
 });

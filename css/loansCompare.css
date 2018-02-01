@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -231,8 +232,10 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  padding-top: 45px;
+}
 .ad {
-  margin-top: 45px;
   padding: 10px;
   position: relative;
   z-index: 5;

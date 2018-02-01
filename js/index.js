@@ -3,6 +3,7 @@ $(function () {
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
         effect: 'coverflow',
+        touchMoveStopPropagation : false,
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: 'auto',
