@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-
+    <!-- 引入mui -->
+    <!-- <link rel="stylesheet" href="./dist/mui/css/mui.css"> -->
     <!-- 引入layer -->
     <link rel="stylesheet" href="./dist/layer/need/layer.css">
     <!-- 引入swiper轮播图样式 -->
@@ -40,214 +41,229 @@
         <div id="scrollerRefresh">
 
             <div id="thelist"> -->
-                <!-- 广告部分 -->
-                <div class="ad">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img src="./images/test.jpg" alt="">
-                            </div>
-                            <div class="swiper-slide">2222</div>
-                            <div class="swiper-slide">3333</div>
+
+    <!-- 广告部分 -->
+    <div class="ad">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="./images/test.jpg" alt="">
+                </div>
+                <div class="swiper-slide">2222</div>
+                <div class="swiper-slide">3333</div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 选项导航 -->
+    <div class="selectOption">
+        <div class="optionNav">
+            <a class="item item1" href="#item1">
+                <span class="title">贷款金额</span>&nbsp;
+                <span class="iconfont">&#xe600;</span>
+            </a>
+            <a class="item item2" href="#item2">
+                <span class="title">贷款期限</span>&nbsp;
+                <span class="iconfont">&#xe600;</span>
+            </a>
+            <a class="item item3" href="#item3">
+                <span class="title">审核要求</span>&nbsp;
+                <span class="iconfont">&#xe600;</span>
+            </a>
+        </div>
+        <div class="optionBox">
+            <div class="boxes">
+                <div class="box box1">
+                    <span>1000元以下</span>
+                    <span>1000元以下</span>
+                    <span>1000元以下</span>
+                    <span>1000元以下</span>
+                    <span>1000元以下</span>
+                    <span>1000元以下</span>
+                </div>
+                <div class="box box2 hide">
+                    <span>1~2月</span>
+                    <span>1~2月</span>
+                    <span>1~2月</span>
+                    <span>1~2月</span>
+                    <span>1~2月</span>
+                    <span>1~2月</span>
+                </div>
+                <div class="box box3 hide">
+                    <span>要求1</span>
+                    <span>要求2</span>
+                    <span>要求3</span>
+                    <span>要求4</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 贷款途径列表 -->
+    <div class="loansList">
+        <ul>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
                         </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination"></div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
                     </div>
-                </div>
-
-                <!-- 选项导航 -->
-                <div class="selectOption">
-                    <div class="optionNav">
-                        <a class="item item1" href="#item1">
-                            <span class="title">贷款金额</span>&nbsp;
-                            <span class="iconfont">&#xe600;</span>
-                        </a>
-                        <a class="item item2" href="#item2">
-                            <span class="title">贷款期限</span>&nbsp;
-                            <span class="iconfont">&#xe600;</span>
-                        </a>
-                        <a class="item item3" href="#item3">
-                            <span class="title">审核要求</span>&nbsp;
-                            <span class="iconfont">&#xe600;</span>
-                        </a>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
                     </div>
-                    <div class="optionBox">
-                        <div class="boxes">
-                            <div class="box box1">
-                                <span>1000元以下</span>
-                                <span>1000元以下</span>
-                                <span>1000元以下</span>
-                                <span>1000元以下</span>
-                                <span>1000元以下</span>
-                                <span>1000元以下</span>
-                            </div>
-                            <div class="box box2 hide">
-                                <span>1~2月</span>
-                                <span>1~2月</span>
-                                <span>1~2月</span>
-                                <span>1~2月</span>
-                                <span>1~2月</span>
-                                <span>1~2月</span>
-                            </div>
-                            <div class="box box3 hide">
-                                <span>要求1</span>
-                                <span>要求2</span>
-                                <span>要求3</span>
-                                <span>要求4</span>
-                            </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
                         </div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
                     </div>
-                </div>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
+                    </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
+                        </div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
+                    </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
+                        </div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
+                    </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
+                        </div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
+                    </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="loansDetail.html">
+                    <div class="left">
+                        <div class="left_title">
+                            <span class="logo">
+                                <img src="./images/LOGO_51返呗.png" alt="">
+                            </span>
+                            <span class="title">51返呗</span>
+                            <span class="des">上市公司背景</span>
+                        </div>
+                        <p class="left_des">额度高达3万，最快3分钟到账</p>
+                        <p class="left_money">
+                            <span>借款额度(元)</span>
+                            <span class="num">1000~30000</span>
+                        </p>
+                    </div>
+                    <div class="right">
+                        <p class="num">0.66%</p>
+                        <p>月利率</p>
+                    </div>
+                    <div class="compare">
+                        <span class="iconfont">&#xe61f;</span>对比
+                    </div>
+                </a>
+            </li>
 
-                <!-- 贷款途径列表 -->
-                <div class="loansList">
-                    <ul>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                        <li>
-                            <div class="left">
-                                <div class="left_title">
-                                    <span class="logo">
-                                        <img src="./images/LOGO_51返呗.png" alt="">
-                                    </span>
-                                    <span class="title">51返呗</span>
-                                    <span class="des">上市公司背景</span>
-                                </div>
-                                <p class="left_des">额度高达3万，最快3分钟到账</p>
-                                <p class="left_money">
-                                    <span>借款额度(元)</span>
-                                    <span class="num">1000~30000</span>
-                                </p>
-                            </div>
-                            <div class="right">
-                                <p class="num">0.66%</p>
-                                <p>月利率</p>
-                            </div>
-                            <div class="compare">
-                                <span class="iconfont">&#xe61f;</span>对比
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+        </ul>
+    </div>
 
-                <div class="end">
-                    <div class="line"></div>
-                    <p>已经到底啦</p>
-                </div>
-            <!-- </div>
+    <div class="end">
+        <div class="line"></div>
+        <p>已经到底啦</p>
+    </div>
+
+    <!-- </div>
         </div>
     </div> -->
 
@@ -259,9 +275,9 @@
     <!-- 贷款对比 -->
     <div class="compareBox">
         <div class="left">
-            <img src="./images/icon_Arrow@2x.png" alt="">
-            <p>收</p>
-            <p>起</p>
+            <img src="./images/icon_Arrow_right@2x.png" alt="">
+            <p>打</p>
+            <p>开</p>
         </div>
         <div class="right">
             <div class="content">
@@ -277,14 +293,13 @@
     </div>
 
     <script src="./dist/jquery/jquery.min.js"></script>
+    <!-- <script src="./dist/mui/js/mui.js"></script> -->
     <script src="./dist/layer/layer.js"></script>
     <!-- <script src="./dist/iscroll/iscroll-lite.js"></script> -->
     <script src="./dist/iscroll/iscroll-probe.js"></script>
-    <!-- <script src="./dist/layer/layer.js"></script> -->
     <script src="./js/rem.js"></script>
     <script src="./dist/swiper/swiper.js"></script>
-    <script src="./js/base.js"></script>
-    <!-- <script src="./dist/layer/layer.js"></script> -->
+    <!-- <script src="./js/base.js"></script> -->
     <script src="./js/loansCompare.js"></script>
 </body>
 

@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -231,8 +232,14 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+body {
+  padding-top: 45px;
+}
+.mui-scroll-wrapper {
+  top: 45px;
+}
 .compareList {
-  padding: 45.625px 0.9375rem 0.625rem 0.9375rem;
+  padding: .625rem .9375rem .625rem .9375rem;
 }
 .compareList .item {
   padding: .625rem .3125rem;

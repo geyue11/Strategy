@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -231,8 +232,8 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-body {
-  padding-top: 93px;
+.mui-scroll-wrapper {
+  top: 48px;
 }
 .swiper-container {
   width: 100%;

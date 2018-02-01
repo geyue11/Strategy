@@ -53,7 +53,7 @@ header {
 // 滚动导航
 .scrollNav {
     position: fixed;
-    top: 45px;
+    // top: 45px;
     z-index: 10;
     height: 48px;
     width: 100%;
@@ -104,7 +104,7 @@ header {
                 text-align: center;
                 opacity: .5;
                 padding-right: 15px;
-                // box-sizing: border-box;
+                box-sizing: content-box;
                 &.active {
                     opacity: 1;
                     a {
@@ -298,4 +298,8 @@ header {
 	// left: 0;
 	// width: 100%;
 	overflow: hidden;
+}
+
+#pullDown {
+    display: none;
 }

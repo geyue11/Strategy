@@ -1,5 +1,10 @@
 $(function(){
 
+    // $('#scroller').css({
+    //     'transform':'translate(-25px, 0px) translateZ(0px)',
+    //     'transition' : 'all .5s'
+    // });
+
     // 顶部折叠导航部分
     (function(){
 

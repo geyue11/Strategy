@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -279,7 +280,6 @@ header h1 {
 }
 .scrollNav {
   position: fixed;
-  top: 45px;
   z-index: 10;
   height: 48px;
   width: 100%;
@@ -333,6 +333,7 @@ header h1 {
   text-align: center;
   opacity: .5;
   padding-right: 15px;
+  box-sizing: content-box;
 }
 .scrollNav .scrollBox #scroller li.active {
   opacity: 1;
@@ -519,4 +520,7 @@ header h1 {
 }
 #wrapper {
   overflow: hidden;
+}
+#pullDown {
+  display: none;
 }

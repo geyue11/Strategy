@@ -81,6 +81,7 @@ $(function () {
 				$('.compareBox>.left').animate({
 					width: '2.5rem'
 				}, 300);
+				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
 			} else {
 				$('.compareBox>.right').animate({
 					left: -1000
@@ -88,6 +89,7 @@ $(function () {
 				$('.compareBox>.left').animate({
 					width: '1.5rem'
 				}, 300);
+				$('.compareBox>.left').html('<img src="./images/icon_Arrow_right@2x.png" alt=""><p>打</p><p>开</p>');
 			}
 		});
 	})();
@@ -117,6 +119,13 @@ $(function () {
 	(function () {
 		// 点击导航，显示对应的盒子
 		$('.selectOption').on('click', '.optionNav>.item', function (e) {
+			$(this).children('.iconfont').css({
+				transform: 'rotate(180deg) translateY(50%)',
+				transition: 'all .2s'
+			}).end().siblings().children('.iconfont').css({
+				transform: 'translateY(-50%)',
+				transition: 'all .2s'
+			});
 			$('.optionBox').fadeIn(300);
 			$('.gray_fg').removeClass('hide');
 			for (var i = 1; i < 4; i++) {
@@ -128,6 +137,10 @@ $(function () {
 
 		// 点击内容盒子，收起内容盒子
 		$('.optionBox').on('click', function () {
+			$('.selectOption .optionNav>.item').children('.iconfont').css({
+				transform: 'translateY(-50%)',
+				transition: 'all .2s'
+			});
 			$(this).fadeOut(300);
 			$('.gray_fg').addClass('hide');
 		});
@@ -149,7 +162,9 @@ $(function () {
 		var content = $('.compareBox .right>.content');
 
 		// 点击 '+对比' 标签
-		$('.loansList').on('click', ' .compare', function () {
+		$('.loansList').on('click', ' .compare', function (e) {
+			// 阻止页面默认跳转
+			e.preventDefault();
 			// 若底部对比盒子为折叠状态，则展开
 			if ($('.compareBox>.right').css('left') == '-1000px') {
 				$('.compareBox>.right').animate({
@@ -158,6 +173,7 @@ $(function () {
 				$('.compareBox>.left').animate({
 					width: '2.5rem'
 				}, 300);
+				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
 			}
 			// 超过两个，则移除前一个
 			if (content.children().length >= 2) {

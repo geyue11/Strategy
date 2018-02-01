@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -231,10 +232,12 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+.mui-scroll-wrapper {
+  top: 45px;
+}
 .cardBox {
   width: 100%;
   background-color: #fff;
-  padding-top: 45px;
   padding-bottom: 4.75rem;
 }
 .cardBox .top {
@@ -246,7 +249,7 @@ input {
   position: absolute;
   width: 100%;
   box-sizing: border-box;
-  top: 3.75rem;
+  top: 1.25rem;
 }
 .cardBox .card .cardDetail {
   background-color: #fff;

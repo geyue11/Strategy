@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -233,6 +234,12 @@ input {
 }
 body {
   padding-top: 137px;
+}
+.mui-scroll-wrapper {
+  top: 137px;
+}
+#scroller {
+  transform: translate(-25px, 0px) translateZ(0px);
 }
 .optionControlBox {
   width: 100%;

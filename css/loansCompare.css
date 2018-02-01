@@ -450,7 +450,8 @@ body {
 .loansList ul {
   width: 100%;
 }
-.loansList ul li {
+.loansList ul li a {
+  display: block;
   width: 100%;
   height: 6.25rem;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
@@ -462,43 +463,44 @@ body {
   margin-bottom: .625rem;
   zoom: 1;
 }
-.loansList ul li:after {
+.loansList ul li a:after {
   content: "";
   display: block;
   visibility: hidden;
   height: 0;
   clear: both;
 }
-.loansList ul li .left {
+.loansList ul li a .left {
   float: left;
   height: 100%;
 }
-.loansList ul li .left .left_title {
+.loansList ul li a .left .left_title {
   zoom: 1;
   margin-bottom: .3125rem;
   height: 1.125rem;
   line-height: 1.125rem;
 }
-.loansList ul li .left .left_title:after {
+.loansList ul li a .left .left_title:after {
   content: "";
   display: block;
   visibility: hidden;
   height: 0;
   clear: both;
 }
-.loansList ul li .left .left_title .logo {
+.loansList ul li a .left .left_title .logo {
   float: left;
 }
-.loansList ul li .left .left_title .logo img {
+.loansList ul li a .left .left_title .logo img {
   width: 1.25rem;
   height: 1.25rem;
 }
-.loansList ul li .left .left_title .title {
+.loansList ul li a .left .left_title .title {
   float: left;
   font-size: .875rem;
   padding: 0 .5rem;
+  color: #000;
 }
-.loansList ul li .left .left_title .des {
+.loansList ul li a .left .left_title .des {
   display: block;
   height: 1rem;
   line-height: 1rem;
@@ -511,36 +513,36 @@ body {
   transform: skewX(-5deg);
   padding: 0 .1875rem;
 }
-.loansList ul li .left .left_des {
+.loansList ul li a .left .left_des {
   font-size: .625rem;
   color: #999;
   line-height: 1.5625rem;
 }
-.loansList ul li .left .left_money {
+.loansList ul li a .left .left_money {
   font-size: .625rem;
   color: #999;
   line-height: 1.5625rem;
 }
-.loansList ul li .left .left_money span.num {
+.loansList ul li a .left .left_money span.num {
   color: #FF6363;
   font-size: .75rem;
   padding: 0 .3125rem;
 }
-.loansList ul li .right {
+.loansList ul li a .right {
   height: 100%;
   float: right;
   box-sizing: border-box;
   padding-top: 1.5625rem;
 }
-.loansList ul li .right p {
+.loansList ul li a .right p {
   font-size: .625rem;
   color: #999;
 }
-.loansList ul li .right p.num {
+.loansList ul li a .right p.num {
   color: #FF6363;
   font-size: .875rem;
 }
-.loansList ul li .compare {
+.loansList ul li a .compare {
   width: 3.75rem;
   height: 1.25rem;
   line-height: 1.25rem;
@@ -553,7 +555,7 @@ body {
   background: linear-gradient(#62E4E4, #30C8C8);
   color: #fff;
 }
-.loansList ul li .compare .iconfont {
+.loansList ul li a .compare .iconfont {
   font-size: .5rem;
   padding: 0 .1875rem;
 }

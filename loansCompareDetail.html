@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入mui框架 -->
+    <link rel="stylesheet" href="./dist/mui/css/mui.css">
     <!-- 引入layer -->
     <link rel="stylesheet" href="./dist/layer/need/layer.css">
     <!-- 引入公共样式 -->
@@ -25,14 +27,19 @@
     </header>
 
     <!-- 滚动区域主体 -->
-    <div id="wrapper">
+    <!-- <div id="wrapper">
         <div id="scrollerRefresh">
-            <!-- <div id="pullDown">
+            <div id="pullDown">
 				<span class="pullDownIcon"></span>
 				<span class="pullDownLabel">下拉刷新...</span>
-			</div> -->
+			</div>
 
-            <div id="thelist">
+            <div id="thelist"> -->
+    <!--下拉刷新容器-->
+    <div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+        <div class="mui-scroll">
+            <!--数据列表-->
+            <div class="mui-table-view mui-table-view-chevron">
 
                 <div class="compareList">
                     <div class="item">
@@ -162,6 +169,7 @@
 
     <script src="./js/rem.js"></script>
     <script src="./dist/jquery/jquery.min.js"></script>
+    <script src="./dist/mui/js/mui.js"></script>
     <!-- <script src="./dist/iscroll/iscroll-lite.js"></script> -->
     <script src="./dist/iscroll/iscroll-probe.js"></script>
     <script src="./dist/layer/layer.js"></script>

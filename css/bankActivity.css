@@ -124,6 +124,7 @@ section {
 body {
   font: 12px/1.5 'Microsoft YaHei', '宋体', Tahoma, Arial, sans-serif;
   color: #555;
+  background-color: #fff;
 }
 em,
 i {
@@ -232,7 +233,10 @@ input {
   box-sizing: border-box;
 }
 body {
-  padding-top: 128px;
+  padding-top: 83px;
+}
+.mui-scroll-wrapper {
+  top: 83px;
 }
 .foldNav {
   width: 100%;
