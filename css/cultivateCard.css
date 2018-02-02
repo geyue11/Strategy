@@ -233,20 +233,17 @@ input {
   box-sizing: border-box;
 }
 body {
-  padding-top: 137px;
+  padding-top: 92px;
 }
 .mui-scroll-wrapper {
-  top: 137px;
-}
-#scroller {
-  transform: translate(-25px, 0px) translateZ(0px);
+  top: 92px;
 }
 .optionControlBox {
   width: 100%;
   position: fixed;
   background-color: #fff;
   z-index: 10;
-  top: 93px;
+  top: 48px;
 }
 .optionControlBox .optionControl {
   box-sizing: border-box;

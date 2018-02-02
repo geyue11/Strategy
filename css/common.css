@@ -280,6 +280,7 @@ header h1 {
 }
 .scrollNav {
   position: fixed;
+  top: 0;
   z-index: 10;
   height: 48px;
   width: 100%;

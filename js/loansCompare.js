@@ -100,7 +100,7 @@ $(function () {
 			if ($(window).scrollTop() >= $('.ad').height()) {
 				$('.selectOption').css({
 					position: 'fixed',
-					top: '45px'
+					top: '0'
 				});
 				$('body').css('padding-top', $('.selectOption').height() + 45);
 				$('.ad').css('margin-top', 0);
@@ -110,7 +110,7 @@ $(function () {
 					top: '0'
 				});
 				$('body').css('padding-top', 0);
-				$('.ad').css('margin-top', 45);
+				// $('.ad').css('margin-top', 45);
 			}
 		});
 	})();

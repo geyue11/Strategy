@@ -1,15 +1,15 @@
 $(function () {
-    // 滚动导航部分
-    (function () {
-        if ($('.scrollBox').length != 0) {
-            new IScroll('.scrollBox', {
-                eventPassthrough: true,
-                scrollX: true,
-                scrollY: false,
-                preventDefault: false
-            });
-        }
-    })();
+    // // 滚动导航部分
+    // (function () {
+    //     if ($('.scrollBox').length != 0) {
+    //         new IScroll('.scrollBox', {
+    //             eventPassthrough: true,
+    //             scrollX: true,
+    //             scrollY: false,
+    //             preventDefault: false
+    //         });
+    //     }
+    // })();
 
     // 下拉刷新部分
     (function () {
