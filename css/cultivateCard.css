@@ -5,6 +5,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 解决IOS默认滑动很卡的情况 */
   -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
 }
 /* 禁止缩放表单 */
 input[type="submit"],
@@ -247,7 +248,7 @@ body {
 }
 .optionControlBox .optionControl {
   box-sizing: border-box;
-  margin: 8px;
+  margin: 9px;
   border: 1px solid #5971F6;
   border-radius: 5px;
   zoom: 1;
@@ -262,8 +263,8 @@ body {
 .optionControlBox .optionControl .item {
   display: block;
   float: left;
-  height: 28px;
-  line-height: 28px;
+  height: 1.75rem;
+  line-height: 1.75rem;
   text-align: center;
   width: 33.33%;
   color: #5971F6;

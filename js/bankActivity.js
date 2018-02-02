@@ -9,7 +9,7 @@ $(function(){
     (function(){
 
         // 导航折叠和展开
-        $('.unfold').on('click',function(){
+        $('.unfold').on('tap',function(){
             $('.foldNav').toggleClass('fold');
             $('.gray_fg').toggleClass('hide');
             if(!$('.gray_fg').hasClass('hide')){
@@ -20,7 +20,7 @@ $(function(){
         })
     
         // 点击选项
-        $('.foldNav').on('click','li',function(){
+        $('.foldNav').on('tap','li',function(){
             $(this).addClass('active').siblings().removeClass('active');
             $('.foldNav .static').after($(this));
             // $(this).remove();
