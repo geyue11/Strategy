@@ -56,8 +56,11 @@ body {
 
 .mui-segmented-control.mui-scroll-wrapper .mui-scroll {
     width: auto;
-    height: 48px;
+    height: 2.1875rem;
     white-space: nowrap;
+    border-bottom: 1px solid #eee;
+    padding: 0 .9375rem;
+    font-size: .9375rem;
 }
 
 .mui-bar~.mui-content .mui-fullscreen {
@@ -127,5 +130,16 @@ body {
     width: 40px;
 }
 .mui-slider-indicator.mui-segmented-control {
-    background-color: #efeff4;
+    background-color: #fff;
+}
+
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+    display: inline-block;
+    width: auto;
+    padding: 0 .5rem;
+    border: 0;
+}
+
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active {
+    color: #5971F6;
 }
