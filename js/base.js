@@ -81,6 +81,9 @@ $(function () {
 			}
 		});
 
+		// var btnTips = $('.mui-pull-bottom-tips');
+		// btnTips.style.display = 'none';
+
 	})();
 
 
