@@ -1,38 +1,7 @@
 $(function () {
 
-    // 顶部折叠导航部分
-    (function () {
-
-        // 导航折叠和展开
-        $('.unfold').on('tap', function () {
-            $('.foldNav').toggleClass('fold');
-            $('.gray_fg').toggleClass('hide');
-            if (!$('.gray_fg').hasClass('hide')) {
-                $('.unfold').html('&#xe78f;');
-            } else {
-                $('.unfold').html('&#xe791;');
-            }
-        })
-
-        // 点击选项
-        $('.foldNav').on('tap', 'li', function () {
-            $(this).addClass('active').siblings().removeClass('active');
-            $('.foldNav .static').after($(this));
-            // $(this).remove();
-            // $(this).prependTo
-            // 选择后自动关闭折叠导航
-            if (!$('.gray_fg').hasClass('hide')) {
-                $('.gray_fg').addClass('hide');
-                $('.foldNav').addClass('fold');
-                $('.unfold').html('&#xe791;');
-                // $('.unfold').html('&#xe78f;');
-            }
-        });
-
-    })();
-
-    // 滚动导航部分
-    (function () {
+     // 顶部滚动导航部分
+     (function () {
         if ($('.scrollBox').length != 0) {
             new IScroll('.scrollBox', {
                 eventPassthrough: true,
@@ -43,11 +12,48 @@ $(function () {
         }
     })();
 
-    // 处理mui导致a链接失效问题
-    // mui('body').on('tap', 'a', function () {
-    // 	document.location.href = this.href;
-    // });
+    // 选择银行导航部分
+    (function () {
 
+        // 导航折叠和展开
+        $('.unfold').on('tap', function () {
+            $('.gray_fg').toggleClass('hide');
+            if (!$('.gray_fg').hasClass('hide')) {
+                $('.unfold').html('&#xe78f;');
+                $('.foldNav').stop(true).fadeIn(400);
+            } else {
+                $('.unfold').html('&#xe791;');
+                $('.foldNav').stop(true).fadeOut(400);
+            }
+        })
+
+        // 点击滚动导航，同步折叠导航里的高亮样式
+        $('#sliderSegmentedControl').on('tap','.mui-control-item',function(){
+            $('.foldNav li').eq($(this).data('id')).addClass('active').siblings().removeClass('active');
+        });
+
+        // 点击折叠导航选项
+        $('.foldNav').on('tap', 'li', function () {
+            
+            $(this).addClass('active').siblings().removeClass('active');
+            mui('#slider').slider().gotoItem($(this).children('a').data('id'));
+
+            // 选择后自动关闭折叠导航
+            if (!$('.gray_fg').hasClass('hide')) {
+                // 阴影消失，导航收起，改变箭头方向
+                $('.gray_fg').addClass('hide');
+                $('.foldNav').fadeOut(400);
+                $('.unfold').html('&#xe791;');
+            }
+        });
+    })();
+
+    // 处理mui导致a链接失效问题
+    mui('.newsList').on('tap', 'a', function () {
+    	document.location.href = this.href;
+    });
+
+    // 下拉刷新功能
     mui.init();
     (function($) {
         //阻尼系数
@@ -59,15 +65,13 @@ $(function () {
         });
         $.ready(function() {
             //循环初始化所有下拉刷新，上拉加载。
-            $.each(document.querySelectorAll('.mui-slider-group .mui-scroll'), function(index, pullRefreshEl) {
-                $(pullRefreshEl).pullToRefresh({
+            $.each(document.querySelectorAll('.my_refresh'), function(index, pullRefreshEl) {
+                $(pullRefreshEl).pullRefresh({
                     down: {
                         callback: function() {
                             var self = this;
                             setTimeout(function() {
-                                // var ul = self.element.querySelector('.mui-table-view');
-                                // ul.insertBefore(createFragment(ul, index, 10, true), ul.firstChild);
-                                self.endPullDownToRefresh();
+                                $($('.my_refresh')[index]).pullRefresh().endPulldownToRefresh();
                             }, 1000);
                         }
                     },
@@ -77,7 +81,7 @@ $(function () {
                     //         setTimeout(function() {
                     //             // var ul = self.element.querySelector('.mui-table-view');
                     //             // ul.appendChild(createFragment(ul, index, 5));
-                    //             self.endPullUpToRefresh();
+                    //             self.endPullupToRefresh();
                     //         }, 1000);
                     //     }
                     // }

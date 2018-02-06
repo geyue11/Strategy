@@ -297,15 +297,15 @@ header h1 {
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
   position: relative;
   top: -3px;
-  padding: 0 13px;
+  padding: 0 .8125rem;
   padding-right: 0;
 }
 .scrollNav .scrollBox #scroller {
   position: absolute;
   z-index: 10;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  width: 400px;
-  height: 48px;
+  width: 25rem;
+  height: 3rem;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -330,29 +330,29 @@ header h1 {
   right: 0;
 }
 .scrollNav .scrollBox #scroller li {
-  width: 80px;
-  height: 48px;
+  width: 5rem;
+  height: 3rem;
   float: left;
-  line-height: 48px;
+  line-height: 3rem;
   overflow: hidden;
   text-align: center;
   opacity: .5;
-  padding-right: 15px;
+  padding-right: .9375rem;
   box-sizing: content-box;
 }
 .scrollNav .scrollBox #scroller li.active {
   opacity: 1;
 }
 .scrollNav .scrollBox #scroller li.active a {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 .scrollNav .scrollBox #scroller li > a {
   color: #5971F6;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 600;
 }
 .scrollNav .whitemask {
-  width: 30px;
+  width: 1.875rem;
   height: 45px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.9);

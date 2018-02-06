@@ -13,8 +13,8 @@ getSize();
 window.addEventListener("resize", getSize);
 
 function getSize() {
-    clearTimeout(timer);
-    timer = setTimeout(function () {
+    // clearTimeout(timer);
+    // timer = setTimeout(function () {
         screenWidth = document.documentElement.offsetWidth;
         if (screenWidth <= 320) {
             fontSize = 320 / bili;
@@ -24,5 +24,5 @@ function getSize() {
             fontSize = screenWidth / bili;
         }
         document.documentElement.style.fontSize = fontSize + 'px';
-    }, 100);
+    // }, 100);
 }
