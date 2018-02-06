@@ -5,6 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- UC强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+    <!-- windows phone 点击无高光 -->
+    <meta name="msapplication-tap-highlight" content="no">
+    <!-- 适应移动端 END -->
     <!-- 引入mui样式 -->
     <link rel="stylesheet" href="./dist/mui/css/mui.css">
     <!-- 引入layer -->
@@ -51,13 +66,13 @@
     <!-- 顶部选项卡 -->
     <div class="optionControlBox">
         <div class="optionControl">
-            <a class="active item" href="#item1">
+            <a class="active item" href="javascript:;">
                 提额
             </a>
-            <a class="item" href="#item2">
+            <a class="item" href="javascript:;">
                 养卡
             </a>
-            <a class="item" href="#item3">
+            <a class="item" href="javascript:;">
                 百科
             </a>
         </div>
@@ -143,6 +158,9 @@
             </div>
         </div>
     </div>
+
+    <!-- 横屏时显示 -->
+	<div class="landscape">为了您更好的体验，请在竖屏下浏览该网页</div>
 
     <script src="./dist/mui/js/mui.js"></script>
     <script src="./dist/jquery/jquery.min.js"></script>

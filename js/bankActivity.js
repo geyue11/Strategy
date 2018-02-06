@@ -1,7 +1,7 @@
 $(function () {
 
-     // 顶部滚动导航部分
-     (function () {
+    // 顶部滚动导航部分
+    (function () {
         if ($('.scrollBox').length != 0) {
             new IScroll('.scrollBox', {
                 eventPassthrough: true,
@@ -27,16 +27,34 @@ $(function () {
             }
         })
 
-        // 点击滚动导航，同步折叠导航里的高亮样式
-        $('#sliderSegmentedControl').on('tap','.mui-control-item',function(){
-            $('.foldNav li').eq($(this).data('id')).addClass('active').siblings().removeClass('active');
+        // 点击灰色阴影部分，收起折叠导航
+        $('.gray_fg').on('tap', function () {
+            $('.unfold').html('&#xe791;');
+            $('.foldNav').stop(true).fadeOut(400);
+            $(this).addClass('hide');
         });
 
-        // 点击折叠导航选项
+
+        // 点击滚动导航，同步折叠导航里的高亮样式
+        $('#sliderSegmentedControl').on('tap', '.mui-control-item', function () {
+            $('.foldNav li').eq($(this).data('id')).addClass('active').siblings().removeClass('active');
+        });
+        // 滑动滚动区域，同步折叠导航里的高亮样式
+        $('.mui-slider').on('slide', function (event) {
+            console.log(event.originalEvent.detail.slideNumber);
+            $('.foldNav li').eq(event.originalEvent.detail.slideNumber).addClass('active').siblings().removeClass('active');
+        });
+
+        // 点击折叠导航里的选项
         $('.foldNav').on('tap', 'li', function () {
-            
             $(this).addClass('active').siblings().removeClass('active');
-            mui('#slider').slider().gotoItem($(this).children('a').data('id'));
+
+            // 滚动导航同步到选择的位置
+            // mui.trigger($('.mui-control-item').eq($(this).children('a').data('id'))[0], 'mousedown');
+            mui.trigger($('.mui-control-item').eq($(this).children('a').data('id'))[0], 'touchstart');
+            mui.trigger($('.mui-control-item').eq($(this).children('a').data('id'))[0], 'tap');
+
+            // mui('#slider').slider().gotoItem($(this).children('a').data('id'));
 
             // 选择后自动关闭折叠导航
             if (!$('.gray_fg').hasClass('hide')) {
@@ -50,27 +68,27 @@ $(function () {
 
     // 处理mui导致a链接失效问题
     mui('.newsList').on('tap', 'a', function () {
-    	document.location.href = this.href;
+        document.location.href = this.href;
     });
 
     // 下拉刷新功能
     mui.init();
-    (function($) {
+    (function ($) {
         //阻尼系数
-        var deceleration = mui.os.ios?0.003:0.0009;
+        var deceleration = mui.os.ios ? 0.003 : 0.0009;
         $('.mui-scroll-wrapper').scroll({
             bounce: true,
             indicators: true, //是否显示滚动条
-            deceleration:deceleration
+            deceleration: deceleration
         });
-        $.ready(function() {
+        $.ready(function () {
             //循环初始化所有下拉刷新，上拉加载。
-            $.each(document.querySelectorAll('.my_refresh'), function(index, pullRefreshEl) {
+            $.each(document.querySelectorAll('.my_refresh'), function (index, pullRefreshEl) {
                 $(pullRefreshEl).pullRefresh({
                     down: {
-                        callback: function() {
+                        callback: function () {
                             var self = this;
-                            setTimeout(function() {
+                            setTimeout(function () {
                                 $($('.my_refresh')[index]).pullRefresh().endPulldownToRefresh();
                             }, 1000);
                         }

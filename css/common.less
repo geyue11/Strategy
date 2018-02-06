@@ -6,6 +6,32 @@
     src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
 }
 
+@media all and (orientation: landscape) {
+    /*横屏时代码*/
+    .landscape {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #000;
+        z-index: 100;
+        text-align: center;
+        line-height: 100%;
+        color: #fff;
+        font-size: .625rem;
+        padding-top: 3.75rem;
+    }
+}
+
+@media all and (orientation: portrait) {
+    /*竖屏时代码*/
+    .landscape {
+        display: none; // 隐藏横屏时的提示信息
+    }
+}
+
 .iconfont {
     font-family: "iconfont" !important;
     font-size: 16px;
@@ -52,8 +78,7 @@ header {
 
 // 滚动导航
 .scrollNav {
-    position: fixed;
-    // top: 45px;
+    position: fixed; // top: 45px;
     top: 0;
     z-index: 10;
     height: 48px;
@@ -77,7 +102,10 @@ header {
             }
             position: absolute;
             z-index: 10;
-            -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+            -webkit-tap-highlight-color: rgba(0,
+            0,
+            0,
+            0);
             width: 25rem;
             height: 3rem;
             -webkit-transform: translateZ(0);
@@ -142,13 +170,13 @@ header {
         padding: 0 .9375rem;
         box-sizing: border-box;
         width: 100%;
-        height: 18.5625rem;
+        height: 15.5625rem;
         position: relative;
         background-color: #fff;
         .content {
             display: block;
-            height: 100%;
-            padding: .9375rem 0;
+            height: 100%; // padding: .9375rem 0;
+            padding-bottom: .9375rem;
             box-sizing: border-box;
             border-bottom: 1px solid #eee;
             .left {
@@ -158,6 +186,7 @@ header {
                 position: relative;
                 top: 0;
                 left: 0;
+                padding-right: 0;
                 .title {
                     width: 100%;
                     .txt_cut();
@@ -200,8 +229,7 @@ header {
                     padding: 0 .9375rem;
                     box-sizing: border-box;
                     .center-x();
-                    margin-top: 4.6875rem;
-                    margin-bottom: .625rem;
+                    margin-top: 4.0625rem; // margin-bottom: .625rem;
                 }
             }
         }
@@ -297,12 +325,12 @@ header {
 // 下拉滚动区域
 #wrapper {
     // position: absolute;
-	// z-index: 1;
-	// top: 45px;
-	// bottom: 48px;
-	// left: 0;
-	// width: 100%;
-	overflow: hidden;
+    // z-index: 1;
+    // top: 45px;
+    // bottom: 48px;
+    // left: 0;
+    // width: 100%;
+    overflow: hidden;
 }
 
 #pullDown {

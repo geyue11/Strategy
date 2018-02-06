@@ -102,7 +102,7 @@ $(function () {
 					position: 'fixed',
 					top: '0'
 				});
-				$('body').css('padding-top', $('.selectOption').height() + 45);
+				$('body').css('padding-top', $('.selectOption').height());
 				$('.ad').css('margin-top', 0);
 			} else {
 				$('.selectOption').css({
@@ -110,7 +110,7 @@ $(function () {
 					top: '0'
 				});
 				$('body').css('padding-top', 0);
-				// $('.ad').css('margin-top', 45);
+				// $('.loansList').css('margin-top', 45);
 			}
 		});
 	})();
@@ -143,6 +143,11 @@ $(function () {
 			});
 			$(this).fadeOut(300);
 			$('.gray_fg').addClass('hide');
+		});
+
+		// 点击灰色阴影部分，收起内容盒子
+		$('.gray_fg').on('click',function(){
+			$('.optionBox').trigger('click');
 		});
 
 		// 点击选项
