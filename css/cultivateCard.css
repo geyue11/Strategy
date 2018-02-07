@@ -241,6 +241,7 @@ body {
 }
 .optionControlBox {
   width: 100%;
+  position: absolute;
   position: fixed;
   background-color: #fff;
   z-index: 10;

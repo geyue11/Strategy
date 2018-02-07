@@ -271,6 +271,7 @@ input {
   -moz-osx-font-smoothing: grayscale;
 }
 header {
+  position: absolute;
   position: fixed;
   top: 0;
   height: 45px;
@@ -304,6 +305,7 @@ header h1 {
   color: #fff;
 }
 .scrollNav {
+  position: absolute;
   position: fixed;
   top: 0;
   z-index: 10;

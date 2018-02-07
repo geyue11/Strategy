@@ -27,6 +27,7 @@ $(function () {
                 probeType: 2,
                 bindToWrapper: true
             });
+            // 滚动时，移除显示右边内容的类
             refreshScroll.on('scroll', function () {
                 $('.scrollNav .scrollBox #scroller').removeClass('rightOut');
             });

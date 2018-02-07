@@ -5,6 +5,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 解决IOS默认滑动很卡的情况 */
   -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
 }
 /* 禁止缩放表单 */
 input[type="submit"],
@@ -362,10 +363,11 @@ input {
   display: none;
 }
 .compareBox {
+  position: absolute;
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 2.5rem;
   height: 4.375rem;
   z-index: 30;
 }

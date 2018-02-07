@@ -71,28 +71,7 @@ $(function () {
 	// });
 
 
-	// 底部对比盒子向左滑动动画
-	(function () {
-		$('.compareBox>.left').on('click', function () {
-			if ($('.compareBox>.right').css('left') == '-1000px') {
-				$('.compareBox>.right').animate({
-					left: 0
-				}, 1000);
-				$('.compareBox>.left').animate({
-					width: '2.5rem'
-				}, 300);
-				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
-			} else {
-				$('.compareBox>.right').animate({
-					left: -1000
-				}, 1000);
-				$('.compareBox>.left').animate({
-					width: '1.5rem'
-				}, 300);
-				$('.compareBox>.left').html('<img src="./images/icon_Arrow_right@2x.png" alt=""><p>打</p><p>开</p>');
-			}
-		});
-	})();
+	
 
 	// 选项导航滑动固定
 	(function () {
@@ -161,6 +140,35 @@ $(function () {
 		});
 	})();
 
+	// 底部对比盒子向左滑动动画
+	(function () {
+		$('.compareBox>.left').on('click', function () {
+			if ($('.compareBox>.right').css('left') == '-1000px') {
+				$('.compareBox>.right').animate({
+					left: 0
+				}, 1000);
+				$('.compareBox>.left').animate({
+					width: '2.5rem'
+				}, 300);
+				$('.compareBox').animate({
+					width: '100%'
+				});
+				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
+			} else {
+				$('.compareBox>.right').animate({
+					left: -1000
+				}, 1000);
+				$('.compareBox>.left').animate({
+					width: '1.5rem'
+				}, 300);
+				$('.compareBox').animate({
+					width: '2.5rem'
+				});
+				$('.compareBox>.left').html('<img src="./images/icon_Arrow_right@2x.png" alt=""><p>打</p><p>开</p>');
+			}
+		});
+	})();
+
 	// 添加对比，移除对比选项
 	(function () {
 		// 装对比选项的容器
@@ -172,6 +180,9 @@ $(function () {
 			e.preventDefault();
 			// 若底部对比盒子为折叠状态，则展开
 			if ($('.compareBox>.right').css('left') == '-1000px') {
+				$('.compareBox').animate({
+					width: '100%'
+				});
 				$('.compareBox>.right').animate({
 					left: 0
 				}, 1000);
