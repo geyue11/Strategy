@@ -6,7 +6,6 @@ $(function () {
     // 顶部选项卡切换
     (function () {
         $('.optionControlBox').on('tap', '.item', function () {
-            console.log(1);
             $(this).addClass('active').siblings().removeClass('active');
         });
     })();

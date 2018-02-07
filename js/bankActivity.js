@@ -19,17 +19,17 @@ $(function () {
         $('.unfold').on('tap', function () {
             $('.gray_fg').toggleClass('hide');
             if (!$('.gray_fg').hasClass('hide')) {
-                $('.unfold').html('&#xe78f;');
+                $('.unfold>span').html('&#xe78f;');
                 $('.foldNav').stop(true).fadeIn(400);
             } else {
-                $('.unfold').html('&#xe791;');
+                $('.unfold>span').html('&#xe791;');
                 $('.foldNav').stop(true).fadeOut(400);
             }
         })
 
         // 点击灰色阴影部分，收起折叠导航
         $('.gray_fg').on('tap', function () {
-            $('.unfold').html('&#xe791;');
+            $('.unfold>span').html('&#xe791;');
             $('.foldNav').stop(true).fadeOut(400);
             $(this).addClass('hide');
         });
@@ -61,7 +61,7 @@ $(function () {
                 // 阴影消失，导航收起，改变箭头方向
                 $('.gray_fg').addClass('hide');
                 $('.foldNav').fadeOut(400);
-                $('.unfold').html('&#xe791;');
+                $('.unfold>span').html('&#xe791;');
             }
         });
     })();

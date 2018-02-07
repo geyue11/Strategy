@@ -9,46 +9,58 @@ body {
 // 顶部折叠导航
 .foldNav {
     width: 100%;
-    height: 35px;
+    height: 45px;
     position: fixed;
     top: 93px-45px;
     background-color: #fff;
     border-bottom: 1px solid #eee;
     z-index: 10;
     &.fold {
-        // overflow: hidden;
         display: none;
     }
-    .iconfont {
-        color: #436ED2;
-        font-size: .75rem;
+    .whitemask {
+        display: block;
         position: absolute;
-        right: .9375rem;
+        width: 2rem;
+        height: 2rem;
+        background-color: #fff;
         z-index: 10;
-        .center-y();
+        right: 0;
+        top: 0;
+        .iconfont {
+            color: #436ED2;
+            font-size: .75rem;
+            position: absolute;
+            right: .9375rem;
+            z-index: 10;
+            .center-y();
+        }
     }
     ul {
         width: 100%;
         background-color: #fff;
         position: relative;
         z-index: 5;
-        padding: 0 .875rem;
+        padding: .3125rem .875rem;
         box-sizing: border-box;
         .clearfix();
         >li {
-            padding-right: 1rem;
+            margin: .3125rem .5rem;
+            padding: 0 1.75rem;
             box-sizing: border-box;
             float: left;
-            height: 2.1875rem;
-            line-height: 2.1875rem;
+            height: 1.75rem;
+            line-height: 1.75rem;
+            border: 1px solid #DDDDDD;
             &.active {
+                border: 1px solid #5971F6;
                 a {
                     color: #5971F6;
-                    font-size: 1rem;
+                    font-size: .875rem;
                 }
             }
             a {
-                font-size: .9375rem;
+                font-size: .875rem;
                 color: #333;
             }
         }
@@ -64,7 +76,7 @@ body {
         width: 2rem;
         height: 2rem;
         background-color: #fff;
-        z-index: 4;
+        z-index: 10;
         right: 0;
         top: 0;
         border-left: 1px solid #eee;

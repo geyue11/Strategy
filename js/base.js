@@ -89,48 +89,38 @@ $(function () {
 
 	// 懒加载部分
 	(function () {
-		// mui.init();
 
-		for (var i = 0; i <= 20; i++) {
-			$('.newsList').append(`<li>
-				<a href="http://www.baidu.com" class="content">
-					<div class="right">
-						<img class="lazy" data-original="./images/1.jpg">
-					</div>
-					<div class="left">
-						<div class="title">通付云闪付操作指南通付云闪付操作指南通付云闪付操作指</div>
-						<div class="watch">
-							<span class="iconfont">&#xe681;</span>
-							<span>13456</span>
+		if ($('.newsList').length !== 0) {
+
+			for (var i = 0; i <= 20; i++) {
+				$('.newsList').append(`<li>
+					<a href="http://www.baidu.com" class="content">
+						<div class="right">
+							<img class="lazy" data-original="./images/1.jpg">
 						</div>
-					</div>
-				</a>
-			</li>`);
+						<div class="left">
+							<div class="title">通付云闪付操作指南通付云闪付操作指南通付云闪付操作指</div>
+							<div class="watch">
+								<span class="iconfont">&#xe681;</span>
+								<span>13456</span>
+							</div>
+						</div>
+					</a>
+				</li>`);
+			}
+
+			// mui.init();
+			// var lazyLoad = mui(document).imageLazyload({
+			// 	placeholder: './images/60x60.gif',
+			// 	destroy: false
+			// });
+			// lazyLoad.refresh(true);
+
+			$("img.lazy").lazyload({
+				effect: "fadeIn"
+			});
+
 		}
-
-		$('.newsList').append(`<li>
-		<a href="http://www.baidu.com" class="content">
-			<div class="right">
-				<img class="lazy" data-original="./images/LOGO_51零用钱.png">
-			</div>
-			<div class="left">
-				<div class="title">通付云闪付操作指南通付云闪付操作指南通付云闪付操作指</div>
-				<div class="watch">
-					<span class="iconfont">&#xe681;</span>
-					<span>13456</span>
-				</div>
-			</div>
-		</a>
-	</li>`);
-
-		// var lazyLoad = mui(document).imageLazyload({
-		// 	placeholder: './images/60x60.gif',
-		// 	destroy: false
-		// });
-		// lazyLoad.refresh(true);
-
-		$("img.lazy").lazyload({effect: "fadeIn"});
-
 
 	})();
 
