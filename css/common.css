@@ -233,6 +233,12 @@ input {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
+body,
+html {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0 auto;
+}
 @font-face {
   font-family: 'iconfont';
   src: url('../font/iconfont.eot');

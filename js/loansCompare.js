@@ -140,55 +140,60 @@ $(function () {
 		});
 	})();
 
-	// 底部对比盒子向左滑动动画
+	// 底部对比盒子
 	(function () {
+		// 添加过渡
+		$('.compareBox>.left').css('transition','width 1s');
+		$('.compareBox').css('transition','width 1s');
+
+		// 装对比选项的容器
+		var content = $('.compareBox .right>.content');
+
+		// 底部对比盒子向左滑动动画
 		$('.compareBox>.left').on('click', function () {
+			// console.log($(window).width());
+			// $(window).width();
 			if ($('.compareBox>.right').css('left') == '-1000px') {
-				$('.compareBox>.right').animate({
+				$('.compareBox>.right').css({
 					left: 0
-				}, 1000);
-				$('.compareBox>.left').animate({
-					width: '2.5rem'
-				}, 300);
-				$('.compareBox').animate({
+				});
+				$('.compareBox>.left').css({
+					width: '2.5rem',
+				});
+				$('.compareBox').css({
 					width: '100%'
 				});
 				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
 			} else {
-				$('.compareBox>.right').animate({
+				$('.compareBox>.right').css({
 					left: -1000
-				}, 1000);
-				$('.compareBox>.left').animate({
+				});
+				$('.compareBox>.left').css({
 					width: '1.5rem'
-				}, 300);
-				$('.compareBox').animate({
+				});
+				$('.compareBox').css({
 					width: '2.5rem'
 				});
 				$('.compareBox>.left').html('<img src="./images/icon_Arrow_right@2x.png" alt=""><p>打</p><p>开</p>');
 			}
 		});
-	})();
 
-	// 添加对比，移除对比选项
-	(function () {
-		// 装对比选项的容器
-		var content = $('.compareBox .right>.content');
-
+		// 添加对比，移除对比选项
 		// 点击 '+对比' 标签
 		$('.loansList').on('click', ' .compare', function (e) {
 			// 阻止页面默认跳转
 			e.preventDefault();
 			// 若底部对比盒子为折叠状态，则展开
 			if ($('.compareBox>.right').css('left') == '-1000px') {
-				$('.compareBox').animate({
+				$('.compareBox').css({
 					width: '100%'
 				});
-				$('.compareBox>.right').animate({
+				$('.compareBox>.right').css({
 					left: 0
-				}, 1000);
-				$('.compareBox>.left').animate({
+				});
+				$('.compareBox>.left').css({
 					width: '2.5rem'
-				}, 300);
+				});
 				$('.compareBox>.left').html('<img src="./images/icon_Arrow@2x.png" alt=""><p>收</p><p>起</p>');
 			}
 			// 超过两个，则移除前一个
@@ -214,5 +219,6 @@ $(function () {
 				return false;
 			}
 		});
+
 	})();
 });

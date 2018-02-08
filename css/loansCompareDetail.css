@@ -5,6 +5,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 解决IOS默认滑动很卡的情况 */
   -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
 }
 /* 禁止缩放表单 */
 input[type="submit"],
@@ -282,7 +283,7 @@ input {
   color: #666;
 }
 .compareList .item p.check {
-  padding: 0 .625rem;
+  padding: .3125rem .625rem;
   box-sizing: border-box;
 }
 .compareList .item p.check input {

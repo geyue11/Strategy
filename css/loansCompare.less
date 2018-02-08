@@ -132,6 +132,7 @@ body {
 
 // 底部对比部分
 .compareBox {
+    // transition: width 1s;
     position: absolute;
     position: fixed;
     bottom: 0;
@@ -139,8 +140,9 @@ body {
     // width: 100%;
     width: 2.5rem;
     height: 4.375rem;
-    z-index: 30;
+    z-index: 2;
     .left {
+        // transition: width 1s;
         width: 1.5rem;
         padding-top: 1.6875rem;
         box-sizing: border-box;
@@ -149,7 +151,7 @@ body {
         position: absolute;
         left: 0;
         top: 0;
-        z-index: 31;
+        z-index: 3;
         background-color: #fff;
         box-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
         img {
@@ -164,6 +166,7 @@ body {
         }
     }
     .right {
+        transition: all 1s;
         width: 100%;
         height: 100%;
         position: absolute;

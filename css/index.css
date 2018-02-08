@@ -5,6 +5,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 解决IOS默认滑动很卡的情况 */
   -webkit-overflow-scrolling: touch;
+  -webkit-appearance: none;
 }
 /* 禁止缩放表单 */
 input[type="submit"],
@@ -231,6 +232,335 @@ input {
 .bz {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+body,
+html {
+  max-width: 640px;
+  min-width: 300px;
+  margin: 0 auto;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url('../font/iconfont.eot');
+  src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+@media all and (orientation: landscape) {
+  /*横屏时代码*/
+  .landscape {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #000;
+    z-index: 100;
+    text-align: center;
+    line-height: 100%;
+    color: #fff;
+    font-size: .625rem;
+    padding-top: 3.75rem;
+  }
+}
+@media all and (orientation: portrait) {
+  /*竖屏时代码*/
+  .landscape {
+    display: none;
+  }
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+header {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  height: 45px;
+  background-color: #2C2D31;
+  width: 100%;
+  z-index: 100;
+}
+header .goback {
+  position: absolute;
+  left: 10px;
+  top: 0;
+  display: block;
+  line-height: 45px;
+  color: #fff;
+  text-decoration: none;
+  text-indent: 15px;
+  font-size: .9375rem;
+}
+header .goback img {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+}
+header h1 {
+  font-size: 18px;
+  text-align: center;
+  line-height: 45px;
+  font-weight: normal;
+  color: #fff;
+}
+.scrollNav {
+  position: absolute;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  height: 48px;
+  width: 100%;
+  overflow: hidden;
+  -ms-touch-action: none;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+.scrollNav .scrollBox {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  position: relative;
+  top: -3px;
+  padding: 0 .8125rem;
+  padding-right: 0;
+}
+.scrollNav .scrollBox #scroller {
+  position: absolute;
+  z-index: 10;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  width: 25rem;
+  height: 3rem;
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  text-size-adjust: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.scrollNav .scrollBox #scroller.rightOut {
+  right: 0;
+}
+.scrollNav .scrollBox #scroller li {
+  width: 5rem;
+  height: 3rem;
+  float: left;
+  line-height: 3rem;
+  overflow: hidden;
+  text-align: center;
+  opacity: .5;
+  padding-right: .9375rem;
+  box-sizing: content-box;
+}
+.scrollNav .scrollBox #scroller li.active {
+  opacity: 1;
+}
+.scrollNav .scrollBox #scroller li.active a {
+  font-size: 1.125rem;
+}
+.scrollNav .scrollBox #scroller li > a {
+  color: #5971F6;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.scrollNav .whitemask {
+  width: 1.875rem;
+  height: 45px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 10;
+}
+.newsList > li.bigList {
+  padding: 0 .9375rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 15.5625rem;
+  position: relative;
+  background-color: #fff;
+}
+.newsList > li.bigList .content {
+  display: block;
+  height: 100%;
+  padding-bottom: .9375rem;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.newsList > li.bigList .content .left {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-right: 0;
+}
+.newsList > li.bigList .content .left .title {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: .9375rem;
+  font-weight: 600;
+  color: #333;
+  position: absolute;
+  top: 0;
+}
+.newsList > li.bigList .content .left .watch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #999;
+  font-size: .625rem;
+}
+.newsList > li.bigList .content .left .watch .iconfont {
+  font-size: .625rem;
+}
+.newsList > li.bigList .content .left .endtime {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #999;
+  font-size: .625rem;
+}
+.newsList > li.bigList .content .right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  padding: 0 .9375rem;
+  box-sizing: border-box;
+}
+.newsList > li.bigList .content .right img {
+  display: block;
+  width: 100%;
+  height: 56.2%;
+  padding: 0 .9375rem;
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4.0625rem;
+}
+.newsList > li {
+  padding: 0 .9375rem;
+  box-sizing: border-box;
+  width: 100%;
+  height: 6.25rem;
+}
+.newsList > li .content {
+  display: block;
+  height: 100%;
+  padding: .9375rem 0;
+  box-sizing: border-box;
+  border-bottom: 1px solid #eee;
+}
+.newsList > li .content .left {
+  width: 100%;
+  height: 100%;
+  padding-right: 8.75rem;
+  box-sizing: border-box;
+  position: relative;
+}
+.newsList > li .content .left .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: .875rem;
+  color: #333;
+  font-weight: 600;
+}
+.newsList > li .content .left .watch {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #999;
+  font-size: .625rem;
+}
+.newsList > li .content .left .watch .iconfont {
+  font-size: .625rem;
+}
+.newsList > li .content .left .endtime {
+  position: absolute;
+  right: 8.75rem;
+  bottom: 0;
+  color: #999;
+  font-size: .625rem;
+}
+.newsList > li .content .right img {
+  width: 7.5rem;
+  height: 4.25rem;
+  float: right;
+}
+.end {
+  width: 100%;
+  height: 50px;
+  position: relative;
+}
+.end .line {
+  width: 300px;
+  height: .5px;
+  background-color: #5971F6;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.end p {
+  width: 68px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #5971F6;
+  text-align: center;
+  background-color: #fff;
+  font-size: .625rem;
+  z-index: 1;
+}
+.gray_fg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 3;
+}
+.gray_fg.hide {
+  display: none;
+}
+#wrapper {
+  overflow: hidden;
+}
+#pullDown {
+  display: none;
 }
 .mui-scroll-wrapper {
   top: 48px;

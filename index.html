@@ -7,31 +7,35 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<!-- 禁止 iOS 识别长串数字为电话 -->
 	<meta content="telephone=no" name="format-detection" />
-    <!-- UC强制竖屏 -->
-    <meta name="screen-orientation" content="portrait">
-    <!-- QQ强制竖屏 -->
-    <meta name="x5-orientation" content="portrait">
-    <!-- UC强制全屏 -->
-    <meta name="full-screen" content="yes">
-    <!-- QQ强制全屏 -->
-    <meta name="x5-fullscreen" content="true">
-    <!-- UC应用模式 -->
-    <meta name="browsermode" content="application">
-    <!-- QQ应用模式 -->
-    <meta name="x5-page-mode" content="app">
-    <!-- windows phone 点击无高光 -->
+	<!-- UC强制竖屏 -->
+	<meta name="screen-orientation" content="portrait">
+	<!-- QQ强制竖屏 -->
+	<meta name="x5-orientation" content="portrait">
+	<!-- UC强制全屏 -->
+	<meta name="full-screen" content="yes">
+	<!-- QQ强制全屏 -->
+	<meta name="x5-fullscreen" content="true">
+	<!-- UC应用模式 -->
+	<meta name="browsermode" content="application">
+	<!-- QQ应用模式 -->
+	<meta name="x5-page-mode" content="app">
+	<!-- windows phone 点击无高光 -->
 	<meta name="msapplication-tap-highlight" content="no">
-	
+
+	<script>
+		var t = new Date().getTime();
+	</script>
+
 	<!-- 引入swiper -->
 	<link rel="stylesheet" href="./dist/swiper/swiper.css">
 	<!-- 引入mui -->
-	<link rel="stylesheet" href="./dist/mui/css/mui.css">
+	<link rel="stylesheet" href="./dist/mui/css/mui.min.css">
 	<!-- 引入刷新部分样式 -->
 	<!-- <link rel="stylesheet" href="./dist/refresh/refresh.css"> -->
 	<!-- 引入layer -->
-	<link rel="stylesheet" href="./dist/layer/need/layer.css">
+	<!-- <link rel="stylesheet" href="./dist/layer/need/layer.css"> -->
 	<!-- 引入公共样式 -->
-	<link rel="stylesheet" href="./css/common.css">
+	<!-- <link rel="stylesheet" href="./css/common.css"> -->
 	<!-- 引入该页面样式 -->
 	<link rel="stylesheet" href="./css/index.css">
 	<title>操作指南</title>
@@ -39,7 +43,7 @@
 
 <body>
 
-	
+
 	<!-- 头部 -->
 	<!-- <header>
 		<a href="javascript:history.go(-1);" class="goback">
@@ -91,7 +95,7 @@
 			</div>
 
 			<div id="thelist"> -->
-				
+
 				<!-- 轮播图部分 -->
 				<!-- Swiper -->
 				<div class="swiper-container">
@@ -120,18 +124,24 @@
 
 	<!-- 横屏时显示 -->
 	<div class="landscape">为了您更好的体验，请在竖屏下浏览该网页</div>
-	
+
 
 	<script src="./js/rem.js"></script>
 	<script src="./dist/jquery/jquery.min.js"></script>
 	<!-- <script src="./dist/zepto/zepto.min.js"></script> -->
-	<script src="./dist/mui/js/mui.js"></script>
+	<script src="./dist/mui/js/mui.min.js"></script>
 	<script src="./dist/iscroll/iscroll-lite.js"></script>
 	<script src="./dist/lazyLoad/jquery.lazyload.min.js"></script>
 	<script src="./dist/swiper/swiper.js"></script>
 	<!-- <script src="./dist/layer/layer.js"></script> -->
 	<script src="./js/base.js"></script>
 	<script src="./js/index.js"></script>
+
+
+	<script>
+		tNow = new Date().getTime() - t;
+		console.log(tNow);
+	</script>
 </body>
 
 </html>
