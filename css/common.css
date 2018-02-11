@@ -397,9 +397,8 @@ header h1 {
   padding: 0 .9375rem;
   box-sizing: border-box;
   width: 100%;
-  height: 15.5625rem;
-  position: relative;
   background-color: #fff;
+  height: auto;
 }
 .newsList > li.bigList .content {
   display: block;
@@ -408,64 +407,43 @@ header h1 {
   box-sizing: border-box;
   border-bottom: 1px solid #eee;
 }
-.newsList > li.bigList .content .left {
-  width: 100%;
-  height: 100%;
-  box-sizing: border-box;
-  position: relative;
-  top: 0;
-  left: 0;
-  padding-right: 0;
-}
-.newsList > li.bigList .content .left .title {
-  width: 100%;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  font-size: .9375rem;
-  font-weight: 600;
+.newsList > li.bigList .content .title {
+  font-size: .875rem;
   color: #333;
-  position: absolute;
-  top: 0;
+  font-weight: 600;
+  margin-bottom: .625rem;
 }
-.newsList > li.bigList .content .left .watch {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  color: #999;
-  font-size: .625rem;
+.newsList > li.bigList .content .image {
+  width: 100%;
+  height: 12rem;
 }
-.newsList > li.bigList .content .left .watch .iconfont {
-  font-size: .625rem;
-}
-.newsList > li.bigList .content .left .endtime {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  color: #999;
-  font-size: .625rem;
-}
-.newsList > li.bigList .content .right {
-  position: absolute;
-  top: 0;
-  left: 0;
+.newsList > li.bigList .content .image img {
+  width: 100%;
   height: 100%;
-  width: 100%;
-  padding: 0 .9375rem;
-  box-sizing: border-box;
 }
-.newsList > li.bigList .content .right img {
+.newsList > li.bigList .content .info {
+  zoom: 1;
+  margin-top: .625rem;
+}
+.newsList > li.bigList .content .info:after {
+  content: "";
   display: block;
-  width: 100%;
-  height: 56.2%;
-  padding: 0 .9375rem;
-  box-sizing: border-box;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 4.0625rem;
+  visibility: hidden;
+  height: 0;
+  clear: both;
+}
+.newsList > li.bigList .content .info .watch {
+  float: left;
+  color: #999;
+  font-size: .625rem;
+}
+.newsList > li.bigList .content .info .watch .iconfont {
+  font-size: .625rem;
+}
+.newsList > li.bigList .content .info .endtime {
+  float: right;
+  color: #999;
+  font-size: .625rem;
 }
 .newsList > li {
   padding: 0 .9375rem;

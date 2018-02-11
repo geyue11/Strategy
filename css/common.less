@@ -177,36 +177,33 @@ header {
         padding: 0 .9375rem;
         box-sizing: border-box;
         width: 100%;
-        height: 15.5625rem;
-        position: relative;
         background-color: #fff;
+        height: auto;
         .content {
             display: block;
-            height: 100%; // padding: .9375rem 0;
+            height: 100%;
             padding-bottom: .9375rem;
             box-sizing: border-box;
             border-bottom: 1px solid #eee;
-            .left {
+            .title {
+                font-size: .875rem;
+                color: #333;
+                font-weight: 600;
+                margin-bottom: .625rem;
+            }
+            .image {
                 width: 100%;
-                height: 100%;
-                box-sizing: border-box;
-                position: relative;
-                top: 0;
-                left: 0;
-                padding-right: 0;
-                .title {
+                height: 12rem;
+                img {
                     width: 100%;
-                    .txt_cut();
-                    font-size: .9375rem;
-                    font-weight: 600;
-                    color: #333;
-                    position: absolute;
-                    top: 0;
+                    height: 100%;
                 }
+            }
+            .info {
+                .clearfix();
+                margin-top: .625rem;
                 .watch {
-                    position: absolute;
-                    left: 0;
-                    bottom: 0;
+                    float: left;
                     color: #999;
                     font-size: .625rem;
                     .iconfont {
@@ -214,29 +211,9 @@ header {
                     }
                 }
                 .endtime {
-                    position: absolute;
-                    right: 0;
-                    bottom: 0;
+                    float: right;
                     color: #999;
                     font-size: .625rem;
-                }
-            }
-            .right {
-                position: absolute;
-                top: 0;
-                left: 0;
-                height: 100%;
-                width: 100%;
-                padding: 0 .9375rem;
-                box-sizing: border-box;
-                img {
-                    display: block;
-                    width: 100%;
-                    height: 56.2%;
-                    padding: 0 .9375rem;
-                    box-sizing: border-box;
-                    .center-x();
-                    margin-top: 4.0625rem; // margin-bottom: .625rem;
                 }
             }
         }
