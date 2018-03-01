@@ -1,4 +1,15 @@
 $(function () {
+    
+    // 下拉刷新功能
+    common_refresh(function(){
+        setTimeout(function(){
+            mui('#refreshContainer').pullRefresh().endPulldownToRefresh();
+        }, 1000);
+    });
+
+    // 添加轮播图图片
+    $('.swiper-container>.swiper-wrapper').html(template('carouselTpl',{}));
+
     // 轮播图部分
     var swiper = new Swiper('.swiper-container', {
         pagination: '.swiper-pagination',
@@ -19,3 +30,4 @@ $(function () {
         }
     });
 });
+

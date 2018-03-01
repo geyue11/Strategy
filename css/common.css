@@ -337,7 +337,7 @@ header h1 {
   z-index: 10;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   width: 25rem;
-  height: 3rem;
+  height: 48px;
   -webkit-transform: translateZ(0);
   -moz-transform: translateZ(0);
   -ms-transform: translateZ(0);
@@ -363,9 +363,9 @@ header h1 {
 }
 .scrollNav .scrollBox #scroller li {
   width: 5rem;
-  height: 3rem;
+  height: 48px;
   float: left;
-  line-height: 3rem;
+  line-height: 48px;
   overflow: hidden;
   text-align: center;
   opacity: .5;

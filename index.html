@@ -27,15 +27,15 @@
 	</script>
 
 	<!-- 引入swiper -->
-	<link rel="stylesheet" href="./dist/swiper/swiper.css">
+	<link rel="stylesheet" href="./static/swiper/swiper-3.4.2.min.css">
 	<!-- 引入mui -->
-	<link rel="stylesheet" href="./dist/mui/css/mui.min.css">
+	<link rel="stylesheet" href="./static/mui/css/mui.min.css">
 	<!-- 引入刷新部分样式 -->
-	<!-- <link rel="stylesheet" href="./dist/refresh/refresh.css"> -->
+	<!-- <link rel="stylesheet" href="./static/refresh/refresh.css"> -->
 	<!-- 引入layer -->
-	<!-- <link rel="stylesheet" href="./dist/layer/need/layer.css"> -->
+	<!-- <link rel="stylesheet" href="./static/layer/need/layer.css"> -->
 	<!-- 引入公共样式 -->
-	<!-- <link rel="stylesheet" href="./css/common.css"> -->
+	<link rel="stylesheet" href="./css/common.css">
 	<!-- 引入该页面样式 -->
 	<link rel="stylesheet" href="./css/index.css">
 	<title>操作指南</title>
@@ -100,9 +100,7 @@
 				<!-- Swiper -->
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
-						<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
-						<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
+						<!-- 图片 carouselTpl -->
 					</div>
 					<!-- Add Pagination -->
 					<div class="swiper-pagination"></div>
@@ -125,18 +123,23 @@
 	<!-- 横屏时显示 -->
 	<div class="landscape">为了您更好的体验，请在竖屏下浏览该网页</div>
 
+	<!-- 轮播图部分模板 -->
+	<script type="text/html" id="carouselTpl">
+		<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
+		<div class="swiper-slide" style="background-image:url(./images/1.jpg)"></div>
+	</script>
 
 	<script src="./js/rem.js"></script>
-	<script src="./dist/jquery/jquery.min.js"></script>
-	<!-- <script src="./dist/zepto/zepto.min.js"></script> -->
-	<script src="./dist/mui/js/mui.min.js"></script>
-	<script src="./dist/iscroll/iscroll-lite.js"></script>
-	<script src="./dist/lazyLoad/jquery.lazyload.min.js"></script>
-	<script src="./dist/swiper/swiper.js"></script>
-	<!-- <script src="./dist/layer/layer.js"></script> -->
+	<script src="./static/jquery/jquery.min.js"></script>
+	<!-- <script src="./static/zepto/zepto.min.js"></script> -->
+	<script src="./static/mui/js/mui.min.js"></script>
+	<script src="./static/iscroll/iscroll-lite.js"></script>
+	<script src="./static/lazyLoad/jquery.lazyload.min.js"></script>
+	<script src="./static/artTemplate/template-web.js"></script>
+	<script src="./static/swiper/swiper.min.js"></script>
 	<script src="./js/base.js"></script>
 	<script src="./js/index.js"></script>
-
 
 	<script>
 		tNow = new Date().getTime() - t;

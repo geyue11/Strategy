@@ -34,14 +34,13 @@ $(function () {
             $(this).addClass('hide');
         });
 
-
         // 点击滚动导航，同步折叠导航里的高亮样式
         $('#sliderSegmentedControl').on('tap', '.mui-control-item', function () {
             $('.foldNav li').eq($(this).data('id')).addClass('active').siblings().removeClass('active');
         });
+
         // 滑动滚动区域，同步折叠导航里的高亮样式
         $('.mui-slider').on('slide', function (event) {
-            console.log(event.originalEvent.detail.slideNumber);
             $('.foldNav li').eq(event.originalEvent.detail.slideNumber).addClass('active').siblings().removeClass('active');
         });
 

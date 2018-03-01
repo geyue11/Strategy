@@ -1,4 +1,78 @@
-@import './base.less';
+.clearfix {
+    zoom: 1;
+    &:after {
+      content: "";
+      display: block;
+      visibility: hidden;
+      height: 0;
+      clear: both;
+    }
+  }
+  .w50 {
+    width: 50%;
+  }
+  .w25 {
+    width: 25%;
+  }
+  .w20 {
+    width: 20%;
+  }
+  .w33 {
+    width: 33.333333%;
+  }
+  .fl {
+    float: left;
+  }
+  .fr {
+    float: right;
+  }
+  .db {
+    display: block !important;
+  }
+  .dn {
+    display: none;
+  }
+  /*单行溢出*/
+  .one_txt_cut {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  /*多行溢出 手机端使用*/
+  .txt_cut(@num:2) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @num;
+    -webkit-box-orient: vertical;
+  }
+  /* 水平垂直居中的公共类 */
+  .center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%,-50%);
+  }
+  /* 水平居中公共类 */
+  .center-x{
+    position: absolute;
+    left: 50%;
+    transform:translateX(-50%);
+  }
+  /* 垂直居中公共类 */
+  .center-y{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+  }
+  .bgz{
+    -webkit-background-size: 100% 100%; 
+    background-size: 100% 100%;
+  }
+  .bz{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
 body {
     // padding-top: 128px-45px;\
     padding-top: 48px;
@@ -42,12 +116,12 @@ body {
         position: relative;
         z-index: 5;
         padding: .3125rem .875rem;
-        box-sizing: border-box;
+        .bz();
         .clearfix();
         >li {
             margin: .3125rem .5rem;
             padding: 0 1.75rem;
-            box-sizing: border-box;
+            .bz();
             float: left;
             height: 1.75rem;
             line-height: 1.75rem;
@@ -67,6 +141,7 @@ body {
     }
 }
 
+// 滚动导航部分
 .mui-segmented-control.mui-scroll-wrapper {
     position: relative;
     border-bottom: 1px solid #eee;
