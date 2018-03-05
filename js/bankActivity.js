@@ -85,6 +85,11 @@ $(function () {
             $.each(document.querySelectorAll('.my_refresh'), function (index, pullRefreshEl) {
                 $(pullRefreshEl).pullRefresh({
                     down: {
+                        height: 50, //可选,默认50.触发下拉刷新拖动距离,
+                        //auto: true, //可选,默认false.首次加载自动下拉刷新一次
+                        contentdown: '<img src="./images/1.png" alt="">', //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+                        contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+                        contentrefresh: '<img class="loading" src="./images/1.png" alt="">', //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
                         callback: function () {
                             var self = this;
                             setTimeout(function () {
@@ -104,8 +109,12 @@ $(function () {
                     // }
                 });
             });
+
+            
         });
     })(mui);
+
+    $('.mui-pull-loading.mui-icon.mui-icon-pulldown').remove();
 
     // var item2Show = false,item3Show = false;//子选项卡是否显示标志
     // document.querySelector('.mui-slider').addEventListener('slide', function(event) {

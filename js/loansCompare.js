@@ -81,8 +81,8 @@ $(function () {
 	// 底部对比盒子
 	(function () {
 		// 添加过渡
-		$('.compareBox>.left').css('transition','width 1s');
-		$('.compareBox').css('transition','width 1s');
+		$('.compareBox>.left').css('transition','width .5s');
+		$('.compareBox').css('transition','width .5s');
 
 		// 装对比选项的容器
 		var content = $('.compareBox .right>.content');

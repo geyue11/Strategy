@@ -138,16 +138,6 @@ li {
 strong {
   font-weight: normal;
 }
-.clearfix {
-  zoom: 1;
-}
-.clearfix:after {
-  content: "";
-  display: block;
-  visibility: hidden;
-  height: 0;
-  clear: both;
-}
 a {
   text-decoration: none;
   color: #969696;
@@ -174,6 +164,16 @@ img {
 }
 input {
   font-family: 'Microsoft YaHei';
+}
+.clearfix {
+  zoom: 1;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0;
+  clear: both;
 }
 .w50 {
   width: 50%;
@@ -255,11 +255,15 @@ html {
     left: 0;
     background: #000;
     z-index: 100;
+  }
+  .landscape p {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
     text-align: center;
-    line-height: 100%;
     color: #fff;
     font-size: .625rem;
-    padding-top: 3.75rem;
   }
 }
 @media all and (orientation: portrait) {
@@ -539,4 +543,36 @@ header h1 {
 }
 #pullDown {
   display: none;
+}
+/*下拉刷新文字的样式*/
+.mui-pull-caption {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100px;
+  height: 31px;
+  font-size: 0px;
+}
+/*下拉刷新圆形进度条的大小和样式*/
+.mui-pull > .mui-pull-caption > .loading {
+  animation: loading 1s infinite;
+}
+.mui-pull > .mui-pull-caption > img,
+.mui-slider .mui-slider-group .mui-slider-item img {
+  width: 30px;
+  margin: 0 auto;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  33.33% {
+    transform: rotate(90deg);
+  }
+  66.66% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
 }

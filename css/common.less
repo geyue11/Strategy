@@ -22,11 +22,13 @@ body,html {
         left: 0;
         background: #000;
         z-index: 100;
-        text-align: center;
-        line-height: 100%;
-        color: #fff;
-        font-size: .625rem;
-        padding-top: 3.75rem;
+        p {
+            .center-y();
+            width: 100%;
+            text-align: center;
+            color: #fff;
+            font-size: .625rem;
+        }
     }
 }
 
@@ -321,27 +323,38 @@ header {
     display: none;
 }
 
-// /*下拉刷新文字的样式*/
-// .mui-pull-caption {
-//     background-image: url(../images/list_header_info.png);
-//     background-size: contain;
-//     background-repeat: no-repeat;
-//     background-position: center;
-//     width: 144px;
-//     height: 31px;
-//     font-size: 0px;
-// }
-// /*下拉刷新圆形进度条的大小和样式*/
+/*下拉刷新文字的样式*/
+.mui-pull-caption {
+    // background-image: url('../images/1.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100px;
+    height: 31px;
+    font-size: 0px;
+}
+/*下拉刷新圆形进度条的大小和样式*/
+.mui-pull>.mui-pull-caption>.loading {
+    animation: loading 1s infinite;
+}
+.mui-pull>.mui-pull-caption>img, .mui-slider .mui-slider-group .mui-slider-item img {
+    width: 30px;
+    margin: 0 auto;
+}
 
-// .mui-spinner {
-//     width: 32px;
-//     height: 32px;
-// }
-// .mui-spinner:after {
-//     background-image: url(../images/progress_circle.png);
-// }
-// /*下拉刷新的箭头颜色*/
-
-// .mui-icon-pulldown {
-//     color: #FF058B;
-// }
+// 刷新时的动画
+@keyframes loading {
+    0% {
+        // background-image: url('../images/1.png');
+        transform: rotate(0deg);
+    }
+    33.33% {
+        transform: rotate(90deg);
+    }
+    66.66% {
+        transform: rotate(180deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}

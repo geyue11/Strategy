@@ -96,9 +96,9 @@ function common_refresh(refreshAfter) {
 			down: {
 				height: 50, //可选,默认50.触发下拉刷新拖动距离,
 				//auto: true, //可选,默认false.首次加载自动下拉刷新一次
-				contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+				contentdown: '<img src="./images/1.png" alt="">', //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
 				contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
-				contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+				contentrefresh: '<img class="loading" src="./images/1.png" alt="">', //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
 				callback: function pullfresh() {
 					refreshAfter();
 				} //必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
@@ -116,6 +116,8 @@ function common_refresh(refreshAfter) {
 			// }
 		}
 	});
+
+	$('.mui-pull-loading.mui-icon.mui-icon-pulldown').remove();
 
 	// var btnTips = $('.mui-pull-bottom-tips');
 	// btnTips.style.display = 'none';
